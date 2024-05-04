@@ -1,10 +1,11 @@
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-export default function Home() {
+ 
+export default function Page() {
   return (
-    <main>
-      <h1>Todo List</h1>
-      <Button>ok</Button>
-    </main>
-  );
+    <div>
+      <h1>Home</h1>
+      <Link href="/about">About</Link>
+    </div>
+  )
 }

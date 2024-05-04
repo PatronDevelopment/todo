@@ -1,4 +1,4 @@
-import { fontFamily } from "tailwindcss/defaultTheme";
+// import { fontFamily } from "tailwindcss/defaultTheme";
 
 const svgToDataUri = require("mini-svg-data-uri");
 
@@ -10,14 +10,18 @@ const {
 module.exports = {
   darkMode: ["class"],
   content: [
+    "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
-    fontFamily: {
-      sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     container: {
       center: true,

@@ -1,0 +1,26 @@
+{
+  "PROJECTS": [
+    { "id": "1", "title": "Project1", "status": "Completed" },
+    { "id": "2", "title": "Project2", "status": "Active" },
+    { "id": "3", "title": "Project3", "status": "Completed" },
+    { "id": "4", "title": "Project4", "status": "On-Hold" },
+    { "id": "5", "title": "Project5", "status": "Completed" },
+    { "id": "6", "title": "Project6", "status": "Active" },
+    { "id": "7", "title": "Project7", "status": "Completed" },
+    { "id": "8", "title": "Project8", "status": "On-Hold" }
+  ],
+  "TASKS": [
+    {
+      "id": "1",
+      "title": "Task1",
+      "description": "Task1Description",
+      "status": "Completed"
+    },
+    {
+      "id": "2",
+      "title": "Task2",
+      "description": "Task2Description",
+      "status": "Active"
+    }
+  ]
+}

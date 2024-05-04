@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PropsWithChildren } from "react";
 
 import { User } from "@/components/user";
+import { siteConfig } from "@/config/site";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (
@@ -10,12 +11,16 @@ export default function Layout({ children }: PropsWithChildren) {
         <div className="container flex h-16 items-center">
           <h1>Logo</h1>
           <nav className="flex flex-1 items-center justify-end gap-4">
-            <Link
-              className="transition-colors hover:text-foreground/80 text-foreground/60"
-              href="/overview"
-            >
-              Overview
-            </Link>
+            {siteConfig.mainNav.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-foreground/80 text-foreground/60"
+              >
+                Overview
+              </Link>
+            ))}
+
             <User />
           </nav>
         </div>

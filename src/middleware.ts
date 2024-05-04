@@ -15,7 +15,7 @@ export default auth((req: NextAuthRequest) => {
 
   if (isAuthPage) {
     if (isAuth) {
-      return NextResponse.redirect(new URL("/", req.url));
+      return NextResponse.redirect(new URL("/overview", req.url));
     }
     return;
   }
@@ -26,11 +26,11 @@ export default auth((req: NextAuthRequest) => {
       from += req.nextUrl.search;
     }
     return NextResponse.redirect(
-      new URL(`/login?from=${encodeURIComponent(from)}`, req.url)
+      new URL(`/login?return_to=${encodeURIComponent(from)}`, req.url)
     );
   }
 });
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: ["/overview"],
 };

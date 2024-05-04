@@ -1,12 +1,7 @@
-
-import { User } from "@/components/user";
-
- 
 export default function Page() {
   return (
     <div>
-      <h1>Home</h1>
-      <User />
+      <h1>Hello</h1>
     </div>
   )
 }

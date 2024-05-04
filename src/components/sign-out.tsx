@@ -1,17 +1,16 @@
+import { signOut } from "@/lib/auth";
 
-import { Button } from "@/components/ui/button"
-import { signOut } from "@/lib/auth"
-
- 
-export function SignOut() {
+export function SignOut({ className }: { className?: string }) {
   return (
     <form
       action={async () => {
-        "use server"
-        await signOut()
+        "use server";
+        await signOut();
       }}
     >
-      <Button type="submit">Sign Out</Button>
+      <button type="submit" className={className}>
+        Sign Out
+      </button>
     </form>
-  )
+  );
 }
